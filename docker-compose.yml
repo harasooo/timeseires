@@ -1,0 +1,15 @@
+version: "3.0"
+
+services:
+  notebooks:
+    container_name: "notebooks"
+    build: .
+    restart: always
+    tty: true
+    ports:
+      - "8888:8888"
+    environment:
+      GRANT_SUDO: "yes"
+    volumes:
+      - ./days:/home/jovyan/work
+    command: jupyter notebook --port 8888 --ip=0.0.0.0 --allow-root

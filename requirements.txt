@@ -1,0 +1,7 @@
+pydantic
+typing
+numpy
+pandas
+matplotlib
+jupyter-contrib-nbextensions
+jupyter-nbextensions-configurator
